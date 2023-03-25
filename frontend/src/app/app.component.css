@@ -1,170 +1,35 @@
-/*SCSS FOR MAIN SCREEN*/
 
-/*navigation bar main screen*/
-#navigation_bar_main{
-  position: absolute;
-  width: 375px;
-  height: 57px;
-  left: 0px;
-  top: 0px;
-  background: #594545;
-}
-
-/*navigation bar title*/
-#navigation_bar_title{
-  position: absolute;
-  width: 174px;
-  height: 36px;
-  left: 101px;
-  top: 10px;
-  font-family: 'Itim';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  /* identical to box height */
-  display: flex;
-  align-items: center;
-  color: #FFFFFF;
-}
-
-/*back arrow*/
-#user_face{
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  font-size: 1.7em;
-  left: 19px;
-  top: 14px;
-  color: #FFFFFF;
-}
-
-/*notifications*/
-#bell{
-  position: absolute;
-  left: 330px;
-  right: 19px;
-  top: 14px;
-  bottom: 14px;
-  font-size: 1.7em;
-  color: #FFFFFF;
-}
-
-
-
-/*Thumb buttons*/
-
-/*thumb button panel*/
-#thumb_buttons{
-  position: absolute;
-  width: 375px;
-  height: 104px;
-  left: 0px;
-  top: 708px;
-
-  background: #594545;
-  border-radius: 20px 20px 0px 0px;
-}
-
-
-
-/*Home Button*/
-#home_button{
-  position: absolute;
-  width: 118px;
-  height: 104px;
-  left: -1px;
-  top: 0px;
-  background: #594545;
-  border-radius: 20px 20px 20px 0px;
-}
-#home_text{
-  position: absolute;
-  width: 118px;
-  height: 38px;
-  left: 0px;
-  top: 66px;
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+body{
   text-align: center;
+}
 
-  color: #FFFFFF;
+#container{
+  border: 2px solid red;
+  text-align: center;
+  margin-top: 30px;
 }
 
 
-/*List Button*/
-#list_button{
-  position: absolute;
-  width: 118px;
-  height: 104px;
-  left: 129px;
-  top: 0px;
-  border-radius: 20px 20px 20px 20px;
-  background: #594545;
+#inputs{
+  justify-content: center;
+  height: 400px;
+  margin-top: 50px;
+  border: 2px solid black;
+
+  text-align: center;
 }
 
-#thumb_icons{
-  font-size: 40px;
-  position: absolute;
-  left: 37px;
-  top: 13px;
+label{
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+#button{
+  background-color: teal;
   color: white;
-}
-
-#list{
-  font-size: 40px;
-  position: absolute;
-  left: 42px;
-  top: 13px;
-  color: white;
-}
-
-#list_text{
-  position: absolute;
-  width: 118px;
-  height: 38px;
-  left: 0px;
-  top: 66px;
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+  border-radius: 12px;
+  font-size: 18px;
   text-align: center;
-
-  color: #FFFFFF;
-}
-
-
-/*Extras Button*/
-#extras_button{
-  position: absolute;
-  width: 117px;
-  height: 104px;
-  left: 258px;
-  top: 0px;
-  background: #594545;
-  border-radius: 20px 20px 0px 20px;
-}
-
-#extras_text{
-  position: absolute;
-  width: 117px;
-  height: 38px;
-  left: 0px;
-  top: 66px;
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-
-  color: #FFFFFF;
+  width: 100px;
+  height: 40px;
 }

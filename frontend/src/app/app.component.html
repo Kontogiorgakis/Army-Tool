@@ -1,19 +1,11 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="app.component.css">
-  </head>
 
-  <body>
-    <!-- Navigation Bar-->
-    <app-top-bar *ngIf="top"></app-top-bar>
-
-
-
-    <!-- Thumb Buttons -->
-    <app-thumb-buttons *ngIf="thumb"></app-thumb-buttons>
-  </body>
-</html>
-
-<router-outlet></router-outlet>
-
-<router-outlet></router-outlet>
+    <div id="container">
+      <h1>ANGULAR X UNITY</h1>
+      <div id="inputs">
+        <label for="fname">Starting point:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Finish:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit" id="button"  (click)="addDestination()">
+      </div>
+    </div>

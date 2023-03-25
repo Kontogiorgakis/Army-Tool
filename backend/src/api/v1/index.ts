@@ -5,6 +5,7 @@ import { NotificationController } from './notification/notification.controller';
 import { ProductController } from './product/product.controller';
 import { ShopController } from './shop/shop.controller';
 import { TaskController } from './task/task.controller';
+import { HelmetController } from './helmet/helmet.controller';
 const apiV1Router = express.Router();
 
 
@@ -34,6 +35,10 @@ apiV1Router
   .use(
     '/shops',
     new ShopController().applyRoutes()
+  )
+  .use(
+    '/helmet',
+    new HelmetController().applyRoutes()
   );
 
 
