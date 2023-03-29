@@ -1,0 +1,93 @@
+<!--Add an Item-->
+<!--Stores-->
+<div id="showing" *ngIf="show">
+    <div id="market" (click)="emptyness()">
+        <div id="marketName" style="font-size:24px; color:black">Any</div>
+        <fa-icon [icon]="faMinus" id="empty"></fa-icon>
+    </div>
+    <div id="market" (click)="selectShop(price.name,price.num)" *ngFor="let price of prices; index as i;">
+        <div id="marketName">{{price.name}}</div>
+        <div id="marketPrice">{{price.num}}€</div>
+    </div>
+</div>
+<div id="adding">
+    <div id="add_text">Add Item</div>
+    <form #taskForm="ngForm" (ngSubmit)="addItem()" class="form-container task-form">
+    <!--Kind of Item-->
+    <div id="kind" >
+        <div id="edible">Edible</div>
+        <div id="potable">Potable</div>
+        <div id="other">Other</div>
+    </div>
+
+    <!--informations-->
+    <div id="informations">
+        <div id="namerow" (click)="nameShow()">
+            <div id="name">Name:</div>
+            <select name="cars" id="search_bar" [(ngModel)]="name" name="name" (change)="changeUI()">
+              <option value="Chicken Whole" selected >Chicken Whole</option>
+              <option value="Chicken Breasts">Chicken Breasts</option>
+              <option value="Chicken Drums">Chicken Drums</option>
+              <option value="Chicken Legs">Chicken Legs</option>
+              <option value="Pineapple">Pineapple</option>
+              <option value="Mango">Mango</option>
+              <option value="Avocado">Avocado</option>
+              <option value="Coca Cola">Coca Cola</option>
+              <option value="Red Bull">Red Bull</option>
+              <option value="Gatorade">Gatorade</option>
+              <option value="Chips">Chips</option>
+              <option value="Pop Corn">Pop Corn</option>
+              <option value="Biscuits">Biscuits</option>
+              <option value="Toothbrush">ToothBrush</option>
+              <option value="Toothpaste">ToothPaste</option>
+              <option value="Dental Floss">Dental Floss</option>
+            </select>
+            <!--<input type="text" id="search_bar" placeholder="Name" [(ngModel)]="name" name="name"/>-->
+        </div>
+
+        <div class="dashes" style="opacity: 1;" id="dash1"></div>
+
+        <div id="quantity" (click)="quantityShow()">
+            <div id="quantity_text">Quantity:</div>
+            <fa-icon [icon]="faCircle" id="dot"></fa-icon>
+            <fa-icon [icon]="faCircle" id="dot" style="top:95px;"></fa-icon>
+            <div id="kilograms">Kilograms:</div>
+            <div id="pieces">Pieces:</div>
+
+            <!--numberinput for KILOGRAMS-->
+            <div class="number" id="no1">
+                <span class="minus"  id="mionKM" (click)="minusKM()" style="line-height: 16px;">-</span>
+                <input type="text" value="1.3" class="kiloinput" id="inputKM"/>
+                <span class="plus" id="sinKM" (click)="addKM()"><div id=pl>+</div></span>
+            </div>
+
+            <!--numberinput for pieces-->
+            <div class="number" style="top:82px" id="no2">
+                <span class="minus" id="mionPiece" (click)="minusPieces()" style="line-height: 16px;">-</span>
+                <input type="text" value="5" class="kiloinput" id="inputPieces"/>
+                <span class="plus" id="sinPiece" (click)="addPieces()"><div id=pl>+</div></span>
+            </div>
+            <div class="dashes" id="dash2"></div>
+        </div>
+        <!--Price and Status-->
+        <div id="price_status" (click)="priceShow()">
+            <div id="from">Buy from:</div>
+            <div id="shops" (click)="showStores()">Any</div>
+            <div id="approx">Price Approx:<div id="price"><fa-icon [icon]="faMinus" id="line" *ngIf="any"></fa-icon></div></div>
+            <div id="status">Status:
+                <div id="places">
+                    <img src="../../../../assets/status/fridge.svg" id="fridge">
+                    <img src="../../../../assets/status/cupboard.svg" id="cabinet">
+                    <img src="../../../../assets/status/bathroom.svg" id="bathroom">
+                </div>
+            </div>
+        </div>
+
+        <!--Add item-->
+        <button id="addit" type="submit">
+            <div id="addit_text">Add Item</div>
+            <fa-icon [icon]="faChevronRight" id="right"></fa-icon>
+        </button>
+    </div>
+  </form>
+</div>

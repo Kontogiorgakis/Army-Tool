@@ -1,0 +1,54 @@
+<div id="oral">
+  <div id="oral_text">Oral Health</div>
+  <div id="close" (click)="back()">
+      <fa-icon [icon]="faXmark" id="faX"></fa-icon>
+  </div>
+
+
+  <!--Items-->
+  <div id="item" *ngIf="item[0]">
+      <img src="../../../../assets/bathroomPanel/Oral/toothbrush.jpg" id="image">
+      <div id="item_text">Toothbrush</div>
+
+
+      <div id="counter">Counter:<a *ngIf="done[0]">{{bathroomProducts[0].counter}}</a>pc</div>
+      <div id="minimum_value">Minimum value:<a *ngIf="done[0]">{{bathroomProducts[0].minimum}}</a></div>
+      <div id="add" >
+          <div id="add_text">Add Item</div>
+          <fa-icon [icon]="faChevronRight" id="right"></fa-icon>
+      </div>
+      <fa-icon [icon]="faHeart" id="heart"  [ngStyle]="{'color' : color[0] ? '#c71313':'white'}"></fa-icon>
+
+  </div>
+  <div id="item" *ngIf="item[1]">
+      <img src="../../../../assets/bathroomPanel/Oral/toothpaste.jpg" id="image">
+      <div id="item_text">Toothpaste</div>
+
+
+      <div id="counter">Counter:<a *ngIf="done[1]">{{bathroomProducts[1].counter}}</a>pc</div>
+      <div id="minimum_value">Minimum value:<a *ngIf="done[1]">{{bathroomProducts[1].minimum}}</a></div>
+      <div id="add">
+          <div id="add_text">Add Item</div>
+          <fa-icon [icon]="faChevronRight" id="right"></fa-icon>
+      </div>
+      <fa-icon [icon]="faHeart" id="heart"  [ngStyle]="{'color' : color[1] ? '#c71313':'white'}"></fa-icon>
+
+  </div>
+
+  <div id="item" *ngIf="item[2]">
+      <img src="../../../../assets/bathroomPanel/Oral/dental.jpg" id="image">
+      <div id="item_text">Dental Floss</div>
+
+      <!--Please Add-->
+      <div id="low">Please Add</div>
+
+      <div id="counter">Counter:<a *ngIf="done[2]">{{bathroomProducts[2].counter}}</a>pc</div>
+      <div id="minimum_value">Minimum value:<a *ngIf="done[2]">{{bathroomProducts[2].minimum}}</a></div>
+      <div id="add">
+          <div id="add_text">Add Item</div>
+          <fa-icon [icon]="faChevronRight" id="right"></fa-icon>
+      </div>
+      <fa-icon [icon]="faHeart" id="heart"   [ngStyle]="{'color' : color[2] ? '#c71313':'white'}"></fa-icon>
+
+  </div>
+</div>

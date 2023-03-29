@@ -1,0 +1,15 @@
+#container{
+  overflow:auto;
+  position: fixed;
+  background-color: #040213;
+  opacity: 90%;
+  width: 414px;
+  height: 896px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+#maps{
+  width: 414px;
+  height: 896px;
+}

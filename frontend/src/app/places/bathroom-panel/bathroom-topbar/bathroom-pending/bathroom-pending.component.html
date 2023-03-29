@@ -1,0 +1,39 @@
+<div id="pending">
+  <div id="triangle"></div>
+  <div id="box">
+      <!--Check All-->
+      <div id="checkAll">
+          <div id="checkAllText">
+              Check All
+          </div>
+          <div id="square" (click)="checkAll()" ><fa-icon [icon]="faCheck" id="check" *ngIf="all"></fa-icon></div> <!--Right Side-->
+          <div id="total">{{pendingProducts.length}} Items Total</div>
+          <hr/>
+      </div>
+
+      <!--Listing-->
+      <div id="attrs">
+          <div id="prods">
+              <fa-icon [icon]="faListOl" id="calendar" style="left:0px"></fa-icon>
+              <div id="prodsText" style="left:60px">Products</div>
+          </div>
+
+          <div id="prods" style="left:430px">
+              <fa-icon [icon]="faCalendarDays" id="calendar"></fa-icon>
+              <div id="prodsText">Date</div>
+          </div>
+      </div>
+
+      <div id="purchasedItems">
+        <!--Rows-->
+        <div class="rows" *ngFor="let pending of pendingProducts; index as i;">
+          <div id="num">{{i+1}}.</div>
+          <div id="item">{{pending.quantity}} {{pending.name}}</div>
+          <div id="date">{{dates[i]}}</div>
+          <div id="squareFor" (click)="checkItem(i)">
+            <fa-icon [icon]="faCheck" id="check" *ngIf="checked[i]"></fa-icon>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

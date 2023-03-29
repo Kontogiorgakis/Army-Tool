@@ -1,0 +1,117 @@
+/*bread*/
+#breadcrumb{
+  position: absolute;
+  width: 432px;
+  height: 77px;
+  left: 777px;
+  top: 36px;
+}
+
+#bathroom{
+  position: absolute;
+  top:10px;
+  left: 20px;
+}
+
+#bathroomText{
+  position: absolute;
+  width: 109.92px;
+  height: 38px;
+  left: 103px;
+  top: 22px;
+
+  font-family: 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+
+}
+
+/*Categories*/
+#panel{
+  position: absolute;
+  width: 1920px;
+  height: 936px;
+  left: 0px;
+  top: 147px;
+  background-color: #DDF5F7;
+}
+
+.rows{
+  position: relative;
+  width: 1816px;
+  height: 291px;
+  left: 52px;
+  top:40px;
+  margin-bottom: 50px;
+}
+
+.category{
+  cursor: pointer;
+  position: absolute;
+  width: 417px;
+  height: 291px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3));
+  border-radius: 20px;
+}
+
+#img{
+  position: relative;
+  width: 417px;
+  height: 291px;
+  filter: brightness(96%);
+}
+
+.productText{
+  z-index: 1;
+  position: absolute;
+  width: 417px;
+  top:40%;
+
+  font-family: 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 55px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+/*Voice*/
+#voice{
+  position: absolute;
+  height: 100px;
+  left: 507px;
+  top: 758px;
+}
+
+#voiceText{
+  position: absolute;
+  width: 878px;
+  height: 42px;
+  left: 139px;
+  top: 29px;
+
+  font-family: 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 33px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+
+  color: #3B577D;
+}
+

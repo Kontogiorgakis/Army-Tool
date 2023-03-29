@@ -1,0 +1,63 @@
+<div id="recipe">
+  <div id="frameImage">
+      <img src="../../../../assets/recipes/tropical.jpg" id="image">
+  </div>
+
+  <div id="rest">
+      <div id="title">Frozen Tropical Yogurt</div>
+      <div id="informations">
+          <div id="frameInfo">
+              <div id="number">98</div>
+              <div id="subtext">kcal</div>
+          </div>
+          <div id="frameInfo" style="left: 108px;">
+              <div id="number">830</div>
+              <div id="subtext" style="left: 12px;">grams</div>
+          </div>
+          <div id="frameInfo" style="left: 198px;">
+              <div id="number" style="left: 28px;">6</div>
+              <div id="subtext"style="left: 7px;">servings</div>
+          </div>
+          <div id="frameInfo" style="left: 287px;">
+              <div id="number" style="left: 22px;">15</div>
+              <div id="subtext" style="left: 7px;">minutes</div>
+          </div>
+      </div>
+
+      <div id="tags">
+          <div id="tagText">Breakfast</div>
+          <div id="tagText" style="left: 130px;">Nutritional</div>
+          <fa-icon [icon]="faSmile" id="face"></fa-icon>
+          <div id="tagText" style="left: 265px;">Easy</div>
+      </div>
+
+      <div id="ingredients">
+          <div id="ingredientsText">Ingredients</div>
+          <div id="items">3/4 Ingredients</div>
+
+          <div id="list">
+              <div id="row">
+                  <img src="../../../../assets/recipes/ingredients/yogurt.jpg" id="ingrImage">
+                  <div id="name">Greek yogurt</div>
+                  <div id="quantity">0.170 kg</div>
+              </div>
+              <div id="row">
+                  <img src="../../../../assets/recipes/ingredients/honey.jpg" id="ingrImage">
+                  <div id="name">Honey</div>
+                  <div id="quantity">2 tbsp</div>
+              </div>
+              <div id="row">
+                  <img src="../../../../assets/recipes/ingredients/pineapple.jpg" id="ingrImage">
+                  <div id="namePin">Pineapple</div>
+                  <span class="plus" (click)="addItem()" *ngIf="plus">+</span>
+                  <div id="quantityPin">1 pc</div>
+              </div>
+              <div id="row">
+                  <img src="../../../../assets/recipes/ingredients/passion.jpg" id="ingrImage">
+                  <div id="name">Passion Fruit</div>
+                  <div id="quantity">1 pc</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

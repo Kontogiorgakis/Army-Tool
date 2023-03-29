@@ -1,0 +1,93 @@
+<!--Oral-->
+<div id="product_segment">
+    <div id="product_text">Oral Health</div>
+    <div id="close" (click)="redirect()">
+        <fa-icon [icon]="faXmark" id="faX"></fa-icon>
+    </div>
+
+
+    <!--Items-->
+    <div id="item">
+        <img src="../../../../../../assets/bathroomPanel/Oral/toothbrush.jpg" id="image">
+        <div id="item_text">Toothbrush</div>
+
+        <!--Running Low-->
+        <div id="low" *ngIf="low[0]">Running Low</div>
+        <!--Please Add-->
+        <div id="low" *ngIf="add[0]">Please Add</div>
+
+        <div id="counter">Counter:<a *ngIf="done">{{oralProduct[0].counter}}</a> pc</div>
+        <div id="minimum_value">Minimum value:
+          <!--numberinput-->
+          <div class="number">
+            <span class="minus" id="mCoca" style="line-height: 13px;" (click)="minOral(0)">-</span>
+            <div class="kiloinput" id="nBrush" *ngIf="done">{{oralProduct[0].minimum}}</div>
+            <span class="plus" id="aCoca" (click)="addOral(0)"><div id=pl>+</div></span>
+          </div>
+        </div>
+        <div id="add" (click)="addItem(0)">
+            <div id="add_text">Add</div>
+        </div>
+        <fa-icon [icon]="faHeart" id="heart" (click)="like(0)" [ngStyle]="{'color' : color[0] ? '#c71313':'white'}"></fa-icon>
+
+    </div>
+    <div id="item">
+        <img src="../../../../../../assets/bathroomPanel/Oral/toothpaste.jpg" id="image">
+        <div id="item_text">Toothpaste</div>
+
+        <!--Running Low-->
+        <div id="low" *ngIf="low[1]">Running Low</div>
+        <!--Please Add-->
+        <div id="low" *ngIf="add[1]">Please Add</div>
+
+        <div id="counter">Counter:<a *ngIf="done">{{oralProduct[1].counter}}</a> pc</div>
+        <div id="minimum_value">Minimum value:
+          <!--numberinput-->
+          <div class="number">
+            <span class="minus" id="mCoca" style="line-height: 13px;" (click)="minOral(1)">-</span>
+            <div class="kiloinput" id="nPaste" *ngIf="done">{{oralProduct[1].minimum}}</div>
+            <span class="plus" id="aCoca" (click)="addOral(1)"><div id=pl>+</div></span>
+          </div>
+        </div>
+        <div id="add" (click)="addItem(1)">
+            <div id="add_text">Add</div>
+        </div>
+        <fa-icon [icon]="faHeart" id="heart" (click)="like(1)" [ngStyle]="{'color' : color[1] ? '#c71313':'white'}"></fa-icon>
+
+    </div>
+    <div id="item">
+        <img src="../../../../../../assets/bathroomPanel/Oral/solution.jpg" id="image">
+        <div id="item_text">Oral Solution</div>
+        <div id="counter">Counter:<a>3</a> pc</div>
+        <div id="minimum_value">Minimum value:<a>1</a></div>
+        <div id="add">
+            <div id="add_text">Add</div>
+        </div>
+        <fa-icon [icon]="faHeart" id="heart"></fa-icon>
+
+    </div>
+    <div id="item">
+        <img src="../../../../../../assets/bathroomPanel/Oral/dental.jpg" id="image">
+        <div id="item_text">Dental Floss</div>
+
+        <!--Running Low-->
+        <div id="low" *ngIf="low[2]">Running Low</div>
+        <!--Please Add-->
+        <div id="low" *ngIf="add[2]">Please Add</div>
+
+        <div id="counter">Counter:<a *ngIf="done">{{oralProduct[2].counter}}</a> pc</div>
+        <div id="minimum_value">Minimum value:
+          <!--numberinput-->
+          <div class="number">
+            <span class="minus" id="mCoca" style="line-height: 13px;" (click)="minOral(2)">-</span>
+            <div class="kiloinput" id="nDent" *ngIf="done">{{oralProduct[2].minimum}}</div>
+            <span class="plus" id="aCoca" (click)="addOral(2)"><div id=pl>+</div></span>
+          </div>
+        </div>
+        <div id="add" (click)="addItem(2)">
+            <div id="add_text">Add</div>
+        </div>
+        <fa-icon [icon]="faHeart" id="heart" (click)="like(2)" [ngStyle]="{'color' : color[2] ? '#c71313':'white'}"></fa-icon>
+
+    </div>
+</div>

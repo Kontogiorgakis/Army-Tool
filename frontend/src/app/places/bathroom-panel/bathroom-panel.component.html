@@ -1,0 +1,84 @@
+<!--Top Bar-->
+<app-bathroom-topbar></app-bathroom-topbar>
+
+<!--BreadCrump-->
+<div id="breadcrumb">
+  <img src="../../../assets/bathroomPanel/Bathroom.png" id="bathroom">
+  <div id="bathroomText">
+      Bathroom
+  </div>
+</div>
+
+<!--Panel-->
+<div id="panel">
+  <div class="rows">
+      <div class="category" (click)="oralRedirect()">
+          <div class="productText">
+              Oral Health
+          </div>
+          <img src="../../../assets/bathroomPanel/Oral.png" id="img">
+      </div>
+
+      <div class="category" style="left: 467px;">
+          <div class="productText">
+              Pharmaceuticals
+          </div>
+          <img src="../../../assets/bathroomPanel/Pharmaceuticals.png" id="img">
+      </div>
+
+      <div class="category" style="left: 934px;">
+          <div class="productText">
+              Hair Care
+          </div>
+          <img src="../../../assets/bathroomPanel/Hair.png" id="img">
+      </div>
+
+      <div class="category" style="left: 1401px;">
+        <div class="productText">
+            Body Care
+        </div>
+        <img src="../../../assets/bathroomPanel/Body.png" id="img">
+    </div>
+  </div>
+
+  <div class="rows">
+      <div class="category">
+          <div class="productText">
+              Face Hygiene
+          </div>
+          <img src="../../../assets/bathroomPanel/Hygiene.png" id="img">
+      </div>
+
+      <div class="category" style="left: 467px;">
+          <div class="productText">
+              Cleaning Tolls
+          </div>
+          <img src="../../../assets/bathroomPanel/Cleaning.png" id="img">
+      </div>
+
+      <div class="category" style="left: 934px;">
+        <div class="productText">
+            Laundry
+        </div>
+        <img src="../../../assets/bathroomPanel/Laundry.png" id="img">
+    </div>
+
+    <div class="category" style="left: 1401px;">
+        <div class="productText">
+            Cleaners
+        </div>
+        <img src="../../../assets/bathroomPanel/General.png" id="img">
+    </div>
+  </div>
+
+  <!--Voice Commands-->
+  <div id="voice">
+    <img src="../../../assets/bathroomPanel/click.png">
+    <div id="voiceText">
+      Use voice commands in search to navigate through items
+    </div>
+  </div>
+</div>
+
+<app-bathroom-oral *ngIf="oral"></app-bathroom-oral>
+

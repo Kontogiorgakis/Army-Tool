@@ -1,0 +1,39 @@
+<!--User Component-->
+<div id="menu" >
+    <div id="triangle"></div>
+    <div id="rect">
+        <!--Nots-->
+        <div id="row" *ngFor="let add of pleaseAdd;">
+            <fa-icon [icon]="faCircleExclamation" id="icon"></fa-icon>
+            <div id="nots">Please Add: <a style="margin-left:5px; font-weight:600">{{add.product}}</a></div>
+            <div id="addButton" (click)="addOnList(add)">
+                <div id="addText">Add</div>
+            </div>
+        </div>
+        <div id="row" *ngFor="let low of runningLow;">
+          <fa-icon [icon]="faCircleDown" id="icon"></fa-icon>
+          <div id="nots">Running Low: <a style="margin-left:5px; font-weight:600">{{low.product}}</a></div>
+          <div id="addButton" (click)="addOnList(low)">
+              <div id="addText">Add</div>
+          </div>
+        </div>
+        <div id="row" *ngFor="let fridge of fromFridge;">
+          <fa-icon [icon]="faCirclePlus" id="icon"></fa-icon>
+          <div id="nots">From Fridge: <a style="margin-left:5px; font-weight:600">{{fridge.product}}</a></div>
+          <div id="addButton" (click)="addOnList(fridge)">
+              <div id="addText">Add</div>
+          </div>
+        </div>
+        <div id="row" *ngFor="let bath of fromBathroom;">
+          <fa-icon [icon]="faCirclePlus" id="icon"></fa-icon>
+          <div id="nots">From Bathroom: <a style="margin-left:5px; font-weight:600">{{bath.product}}</a></div>
+          <div id="addButton" (click)="addOnList(bath)">
+              <div id="addText">Add</div>
+          </div>
+        </div>
+        <div id="nonots" *ngIf="nonots">
+            No Notifications!
+        </div>
+    </div>
+</div>
+
