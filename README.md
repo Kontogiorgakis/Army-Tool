@@ -1,43 +1,38 @@
-# fullstack-template
+# Smart Helmet Application
 
-## Docker Variant
 
-What you will need:
-* Docker 
+An application designed for the systematic organization and optimization of military personnel management, streamlining the allocation of their duties and responsibilities. 
 
-Tested on: 
-* Docker Engine v20.10.17
-* Docker Desktop v4.10.1.
+## Overview
 
-### Useful commands
-Inside *`integration`* folder you can use the following commands:
+The application serves as a comprehensive tool for efficiently managing service assignments within Unit 545. It streamlines the process of allocating tasks to soldiers by providing a user-friendly interface that allows for quick and targeted actions. With its focus on simplicity and effectiveness, the application empowers users to navigate through soldier lists, make necessary updates, and assign services effortlessly. 
 
-> Run application (and build):
-```sh
-docker-compose up --build
-```
+## Key Features
+* **Soldier Management**: Users can view, add, delete, and mark the availability of soldiers, as well as add personal notes.
+* **Service Assignment**: Users can assign services to soldiers based on availability and armament status, adjusting service numbers as needed.
+* **Excel Export**: The application generates an Excel file with the required format for service assignment, which remains editable for any necessary changes.
+* **Service Log**: Users can refer back to previous days' services for reference, acting as a service log for historical data and tracking.
 
-> Run application (with full logging available):
-```sh
-docker-compose up
-```
+## Screenshots
 
-> Run application (detached mode/with no logging available):
-```sh
-docker-compose up -d
-```
+| ![ARMY](Screenshots/Open.png) | ![ARMY](Screenshots/Start_Page.png) 
+|:---:|:---:|
+| Options | Duties |
 
-> Stop application:
-```sh
-docker-compose down
-```
+| ![ARMY](Screenshots/Select_Soldier.png) | ![ARMY](Screenshots/Central_Gate.png) 
+|:---:|:---:|
+| Select Soldier | Central Gate select |
 
-> View logs for specific project/container of the application (e.g., backend):
-```sh
-docker-compose logs -f backend
-```
+| ![ARMY](Screenshots/Applied.png) | ![ARMY](Screenshots/Ready.png) 
+|:---:|:---:|
+| Apply Soldier | Applied |
 
-## Verbose Variant
+| ![ARMY](Screenshots/Last.png) 
+|:---:|
+| Final file |
+
+
+## Installation 
 
 What you will need:
 * NodeJS
@@ -74,3 +69,4 @@ npm run dev
 ```
 
 **Do not forget**: mongod.exe (if on Windows) must be running for the Database to be used. 
+
