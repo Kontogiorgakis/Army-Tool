@@ -5,11 +5,11 @@ import { DefaultSchemaOptions } from '../../../models/shared';
 // ------------------------------------------
 // Interface declaration
 export interface IItem extends Document {
-  name: string;
-  description: string;
+  lat: string;
+  lon: string;
   image: string;
-  price: number;
-  rating: number;
+  name: string;
+  location: string;
   isAvailable: boolean;
   selected: boolean;
 }
@@ -18,11 +18,11 @@ export interface IItem extends Document {
 // Schema definition
 const itemSchema = new Schema(
   {
-    name: {type: String, required: true},
-    description: {type: String, required: true},
+    lat: {type: String, required: true},
+    lon: {type: String, required: true},
     image: {type: String, required: true},
-    price: {type: Number, required: true},
-    rating: {type: Number, required: true},
+    name: {type: String, required: true},
+    location: {type: String, required: true},
     isAvailable: {type: Boolean, required: true},
     selected: {type: Boolean, required: true}
   },

@@ -1,11 +1,9 @@
 import * as express from 'express';
 import { ExampleController } from './example/example.controller';
 import { ItemShopController } from './item-shop/item-shop.controller';
-import { NotificationController } from './notification/notification.controller';
-import { ProductController } from './product/product.controller';
-import { ShopController } from './shop/shop.controller';
-import { TaskController } from './task/task.controller';
-import { HelmetController } from './helmet/helmet.controller';
+import { FirstController } from './first/first.controller';
+import { IpiresiesController } from './ipiresies/ipiresies.controller';
+import { TodayController } from './today/today.controller';
 const apiV1Router = express.Router();
 
 
@@ -20,26 +18,18 @@ apiV1Router
     new ItemShopController().applyRoutes()
   )
   .use(
-    '/tasks',
-    new TaskController().applyRoutes()
+    '/first',
+    new FirstController().applyRoutes()
+  )
+  .use(
+    '/services',
+    new IpiresiesController().applyRoutes()
+  )
+  .use(
+    '/today',
+    new TodayController().applyRoutes()
   )
   /*Mine v1's*/
-  .use(
-    '/products',
-    new ProductController().applyRoutes()
-  )
-  .use(
-    '/notifications',
-    new NotificationController().applyRoutes()
-  )
-  .use(
-    '/shops',
-    new ShopController().applyRoutes()
-  )
-  .use(
-    '/helmet',
-    new HelmetController().applyRoutes()
-  );
 
 
 export { apiV1Router };

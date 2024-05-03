@@ -1,75 +1,37 @@
-<div id="container">
-  <!--Destinations-->
-  <div id="destinations">
-    <div id="current_location">
-      Konstantinidi 18, Heraklion
-    </div>
-    <div id="underloc">
-      <div id="weather">
-        <img src="../../assets/helmie/sun.png">
-        <div id="deg">{{temperature}}°</div>
-      </div>
-      <div id="profile">
-        Jason
-        <img src="../../assets/helmie/male.png" id="male">
-      </div>
-    </div>
-
-    <div id="where">
-      Where is your destination?
-    </div>
-
-    <div id="search_container">
-      <fa-icon [icon]="faMagnifyingGlass" id="glass"></fa-icon>
-      <input type="text" placeholder="Search location . . ." id="search">
-      <img src="../../assets/helmie/go.png" id="go">
-    </div>
+<div id="all">
+  <!--Topside green-->
+  <div id="topside">
+      <div id="fiveforfive">545 Tool</div>
+      <app-date id="date"></app-date>
   </div>
 
-  <!--Locations-->
-  <div id="locations">
-    <!--Location static-->
-    <div id="loc_div" (click)="openMaps()">
-      <div id="image">
-        <img src="../../assets/helmie/earth.png" id="image_loc">
+  <!--Options-->
+  <!--First-->
+  <div id="threeclan">
+      <div class="clan" (click)="redirectTo(1)">
+          <div class="button">
+              <div class="textButton">ΣΤΡΑΤΙΩΤΕΣ</div>
+          </div>
+          <div class="description">
+              Πρόσθεσε, αφαίρεσε έναν στρατιώτη, δες ή επεξεργάσου τα στοιχεία του
+          </div>
       </div>
-      <div id="textes">
-        <div id="basic_text">Maps</div>
-        <div id="under_text">Navigate through maps</div>
+      <div class="clan" (click)="redirectTo(2)">
+          <div class="button">
+              <div class="textButton">ΥΠΗΡΕΣΙΕΣ</div>
+          </div>
+          <div class="description">
+              Καταχώρησε στους στρατιώτες υπηρεσία και δημιούργησε αυτόματα το excel.
+          </div>
       </div>
-    </div>
-
-    <!--Location static-->
-    <div id="loc_div" style="animation: slideInRight 1.8s ease forwards;">
-      <div id="image">
-        <img src="../../assets/helmie/motori.png" id="image_loc">
+      <div class="clan">
+          <div class="button">
+              <div class="textButton">ΗΜΕΡΟΛΟΓΙΟ ΥΠΗΡΕΣΙΩΝ</div>
+          </div>
+          <div class="description">
+              Δες τις υπηρεσίες μιας συγκεκριμένης μέρας και ποιοι στρατιώτες την εκτέλεσαν
+          </div>
       </div>
-      <div id="textes">
-        <div id="basic_text">My motorcycle</div>
-        <div id="under_text">Konstantinidi 19, Heraklion</div>
-      </div>
-    </div>
-
-    <!--Location static-->
-    <div id="loc_div" style="animation: slideInRight 2.1s ease forwards;">
-      <div id="image">
-        <img src="../../assets/helmie/home.png" id="image_loc">
-      </div>
-      <div id="textes">
-        <div id="basic_text">Home</div>
-        <div id="under_text">Riga Feraiou 7, Sitia</div>
-      </div>
-    </div>
-
-    <!--Location static-->
-    <div id="loc_div" style="animation: slideInRight 2.4s ease forwards;">
-      <div id="image">
-        <img src="../../assets/helmie/work.png" id="image_loc">
-      </div>
-      <div id="textes">
-        <div id="basic_text">Work</div>
-        <div id="under_text">Evans 56, Heraklion</div>
-      </div>
-    </div>
   </div>
 </div>
+

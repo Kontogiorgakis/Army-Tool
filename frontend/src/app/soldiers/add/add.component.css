@@ -1,0 +1,126 @@
+#addContainer{
+  width: 970px;
+  height: 658px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #CFCFB7;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+}
+
+#title{
+  align-items: center;
+  padding-top: 10px;
+  display: flex;
+}
+
+#titleText{
+  margin-left: 50px;
+  justify-content: center;
+  font-size: 25px;
+  font-weight:600;
+}
+
+#soldierIcon{
+  width: 100px;
+  height: 100px;
+  margin-left: 35px;
+}
+
+/*Credentials*/
+#credentials{
+  padding-left: 35px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.firstName{
+  margin-top: 40px;
+  display: flex;
+}
+
+.fname{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.inputText{
+  cursor: pointer;
+  color: rgb(66, 66, 66);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-top: 2px;
+  margin-left: 30px;
+  padding-left: 5px;
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+}
+
+#companyDropdown{
+  cursor: pointer;
+  border: none;
+  margin-left: 30px;
+  width: 160px;
+  padding-left: 5px;
+  font-size: 20px;
+  color: rgb(66, 66, 66);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#essoDropdown{
+  cursor: pointer;
+  border: none;
+  margin-left: 30px;
+  width: 160px;
+  padding-left: 5px;
+  font-size: 20px;
+  color: rgb(66, 66, 66);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#armedDropdown{
+  cursor: pointer;
+  border: none;
+  margin-left: 30px;
+  width: 160px;
+  padding-left: 5px;
+  font-size: 20px;
+  color: rgb(66, 66, 66);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#addHim{
+  cursor: pointer;
+  align-items: center;
+  background: #334028;
+  border-radius: 15px;
+
+  width: 180px;
+  height: 60px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
+}
+
+#addHim:hover {
+  background-color: #567a92; /* Change background color on hover */
+}
+
+#addHimText{
+  color: white;
+  font-size: 22px;
+  margin-top: 13px;
+  margin-left: 30px;
+  transition: color 0.2s ease; /* Smooth transition for text color */
+}
+
+#addHim:hover #addHimText {
+  color: #ffffff; /* Change text color on hover */
+}
+

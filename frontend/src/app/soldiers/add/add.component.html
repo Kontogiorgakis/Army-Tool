@@ -1,0 +1,60 @@
+<div id="addContainer" >
+  <div id="title">
+    <img src="../../../assets/soldier.png" id="soldierIcon">
+    <div id="titleText">ΣΥΜΠΛΗΡΩΣΕ ΤΑ ΣΤΟΙΧΕΙΑ ΚΑΙ ΠΡΟΣΘΕΣΕ ΤΟΝ ΣΤΡΑΤΙΩΤΗ</div>
+  </div>
+
+  <div id="credentials">
+    <!--First name-->
+    <div class="firstName">
+      <div class="fname">ΟΝΟΜΑ:</div>
+      <input type="text" class="inputText" id="fname">
+    </div>
+
+    <!--Last name-->
+    <div class="firstName">
+      <div class="fname">ΕΠΩΝΥΜΟ:</div>
+      <input type="text" class="inputText" id="lname">
+    </div>
+
+    <!--LΟΧΟΣ-->
+    <div class="firstName">
+      <div class="fname">ΛΟΧΟΣ:</div>
+      <select name="company" id="companyDropdown">
+        <option value="1ΟΣ ΛΟΧΟΣ">1ος Λόχος</option>
+        <option value="2ΟΣ ΛΟΧΟΣ">2ος Λόχος</option>
+        <option value="3ΟΣ ΛΟΧΟΣ">3ος Λόχος</option>
+        <option value="ΛΥΤ">ΛΥΤ</option>
+        <option value="ΛΔ">ΛΔ</option>
+      </select>
+    </div>
+
+    <!--ARMED-->
+    <div class="firstName">
+      <div class="fname">ΕΣΣΟ:</div>
+      <select name="armed" id="essoDropdown">
+        <option value="Α">Α</option>
+        <option value="Β">Β</option>
+        <option value="Γ">Γ</option>
+        <option value="Δ">Δ</option>
+        <option value="Ε">Ε</option>
+        <option value="ΣΤ">ΣΤ</option>
+      </select>
+    </div>
+
+    <!--ARMED-->
+    <div class="firstName">
+      <div class="fname">ΙΚΑΝΟΤΗΤΑ:</div>
+      <select name="armed" id="armedDropdown">
+        <option value="ΕΝΟΠΛΟΣ">ΕΝΟΠΛΟΣ</option>
+        <option value="ΑΟΠΛΟΣ">ΑΟΠΛΟΣ</option>
+      </select>
+    </div>
+    <div class="firstName">
+      <div id="addHim" (click)="addSoldier()">
+        <div id="addHimText">ΠΡΟΣΘΗΚΗ</div>
+      </div>
+    </div>
+
+  </div>
+</div>

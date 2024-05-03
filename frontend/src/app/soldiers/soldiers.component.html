@@ -1,0 +1,68 @@
+<div id="all">
+  <!-- Topside green -->
+  <div id="topside">
+    <div id="fiveforfive" (click)="backToStart()">545 Tool</div>
+    <app-date id="date"></app-date>
+  </div>
+
+  <!-- Search and rescue -->
+  <div id="sectionSearch" class="sticky">
+    <div *ngFor="let company of desiredCompanyOrder" class="companyButton" [class.selected]="isCompanySelected(company)" (click)="updateBackend(company)">
+      <div class="companyText">{{ company }}</div>
+    </div>
+
+    <div id="searchbar">
+      <img src="../../assets/search.png" id="searchIcon">
+      <input type="text" placeholder="Αναζήτηση..." id="searchText" [(ngModel)]="searchText" (input)="onSearchInputChange()">
+    </div>
+
+    <div id="addButton" (click)="addSoldierToDatabase()">
+      <div class="companyText">ΠΡΟΣΘΕΣΕ ΣΤΡΑΤΙΩΤΗ</div>
+    </div>
+  </div>
+
+  <!-- Companies -->
+  <div class="companySection">
+    <ng-container *ngFor="let companySoldiers of solds; let last = last">
+      <div *ngIf="companySoldiers.soldiers.length > 0" class="companySection" [style.height.px]="calculateContainerHeight(companySoldiers.soldiers.length)">
+        <div id="companyName">{{ companySoldiers.company }}</div>
+
+        <!-- Table container for each company -->
+        <div class="table-container">
+          <div class="table-row header">
+            <div class="table-cell a-a">A/A</div>
+            <div class="table-cell">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</div>
+            <div class="table-cell eso">ΕΣΣΟ</div>
+            <div class="table-cell armed">ΙΚΑΝΟΤΗΤΑ</div>
+            <div class="table-cell">ΔΙΑΘΕΣΙΜΟΤΗΤΑ</div>
+            <div class="table-cell">ΣΗΜΕΙΩΣΗ</div>
+            <img src="../../assets/delete.png" id="bin" style="visibility: hidden;">
+          </div>
+
+          <div class="table-row" *ngFor="let item of companySoldiers.soldiers; let i = index">
+            <div class="table-cell a-a">{{ i+1 }}</div>
+            <div class="table-cell">{{ item.fname + ' ' + item.lname }}</div>
+            <div class="table-cell eso">{{ item.eso }}</div>
+            <div class="table-cell armed">{{ item.armed }}</div>
+            <div class="table-cell availability" (click)="openAvail(item.lname,item.company,item.fname)" [ngClass]="{'green-text': item.availability === 'ΠΑΡΩΝ', 'red-text': item.availability !== 'ΠΑΡΩΝ'}">{{ item.availability }} <img src="../../assets/down.png" id="downArrow"></div>
+            <div class="table-cell note" contenteditable="true" [ngStyle]="{ 'width.px': calculateNoteWidth(item.note) }" (blur)="onNoteInputChange($event,item)" (keydown.enter)="onEnterKey($event, item)">{{ item.note }}</div>
+            <img src="../../assets/delete.png" id="bin" (click)="deleteSoldier(item)">
+          </div>
+        </div>
+
+        <!-- Dashed line between company sections except for the last one -->
+        <div *ngIf="!last" class="dashed-line"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div id="addTheSoldier">
+  <img src="../../assets/x.circle.fill.png" id="xCircle" (click)="closeSoldierSection()" *ngIf="xCircle">
+  <app-add id="addSection" *ngIf="addSection"></app-add>
+</div>
+
+<div id="addTheSoldier">
+  <img src="../../assets/x.circle.fill.png" id="xCircle" (click)="closeAvail()" *ngIf="xCircle2">
+  <app-availability id="addSection"  *ngIf="changeAver" [name]="this.lastNamePass" [company]="this.companyPass" [fname]="this.fnamePass"></app-availability>
+</div>

@@ -1,0 +1,75 @@
+<div id="addContainer" >
+  <div id="title">
+    <img src="../../../assets/soldier.png" id="soldierIcon">
+    <div id="titleText">ΕΠΕΛΕΞΕ ΤΗΝ ΔΙΑΘΕΣΙΜΟΤΗΤΑ ΤΟΥ ΣΤΡΑΤΙΩΤΗ {{name}} ({{company}})</div>
+  </div>
+
+  <div id="credentials">
+    <div id="flexContainer" >
+      <div class="buttonAvail" [class.selected]="selectedOption === 1" (click)="selectIt(1)">
+        <div class="buttonText">ΠΑΡΩΝ</div>
+      </div>
+    </div>
+
+    <div id="flexContainer">
+      <div class="buttonAvail" [class.selected]="selectedOption === 2" (click)="selectIt(2)">
+        <div class="buttonText">ΑΡΡΩΣΤΟΣ</div>
+      </div>
+      <div id="when">
+        <div class="dialogue">ΑΠΟ</div>
+        <input type="text" class="numDate" id="arFromFirst">
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="arFromSec" >
+        <div class="dialogue">ΜΕΧΡΙ</div>
+        <input type="text" class="numDate" id="arToFirst" >
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="arToSec" >
+
+      </div>
+    </div>
+
+    <div id="flexContainer">
+      <div class="buttonAvail" [class.selected]="selectedOption === 3" (click)="selectIt(3)">
+        <div class="buttonText">ΑΔΕΙΑ</div>
+      </div>
+      <div id="when1">
+        <div class="dialogue">ΑΠΟ</div>
+        <input type="text" class="numDate" id="adFromFirst">
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="adFromSec" >
+        <div class="dialogue">ΜΕΧΡΙ</div>
+        <input type="text" class="numDate" id="adToFirst" >
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="adToSec" >
+
+      </div>
+    </div>
+
+
+    <div id="flexContainer">
+      <div class="buttonAvail" [class.selected]="selectedOption === 4" (click)="selectIt(4)">
+        <div class="buttonText">ΑΠΟΣΠΑΣΗ</div>
+      </div>
+      <div id="when2" >
+        <div class="dialogue">ΑΠΟ</div>
+        <input type="text" class="numDate" id="apFromFirst">
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="apFromSec">
+        <div class="dialogue">ΜΕΧΡΙ</div>
+        <input type="text" class="numDate" id="apToFirst">
+        <div class="dialogue">/</div>
+        <input type="text" class="numDate" id="apToSec">
+      </div>
+    </div>
+
+    <div class="firstName">
+      <div id="addHim" (click)="changeAvailability()">
+        <div id="addHimText">ΑΛΛΑΓΗ</div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>

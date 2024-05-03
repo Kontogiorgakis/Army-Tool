@@ -1,0 +1,72 @@
+<div id="all">
+  <!-- Topside green -->
+  <div id="topside">
+    <div id="fiveforfive" (click)="backToStart()">545 Tool</div>
+    <app-date id="date"></app-date>
+  </div>
+
+  <!--Services-->
+  <div id="services">
+
+  </div>
+
+
+
+  <!-- Search and rescue -->
+  <div id="sectionSearch" class="sticky">
+    <div *ngFor="let company of desiredCompanyOrder" class="companyButton" [class.selected]="isCompanySelected(company)" (click)="updateBackend(company)">
+      <div class="companyText">{{ company }}</div>
+    </div>
+
+    <div id="searchbar">
+      <img src="../../assets/search.png" id="searchIcon">
+      <input type="text" placeholder="Αναζήτηση..." id="searchText" [(ngModel)]="searchText" (input)="onSearchInputChange()">
+    </div>
+
+    <div id="addButton">
+      <div class="companyText">ΕΛΕΓΞΕ ΤΟ EXCEL</div>
+    </div>
+  </div>
+
+  <!-- Companies -->
+  <div class="companySection">
+    <ng-container *ngFor="let companySoldiers of solds; let last = last">
+      <div *ngIf="companySoldiers.soldiers.length > 0" class="companySection" [style.height.px]="calculateContainerHeight(companySoldiers.soldiers.length)">
+        <div id="companyName">{{ companySoldiers.company }}</div>
+
+        <!-- Table container for each company -->
+        <div class="table-container">
+          <div class="table-row header">
+            <div class="table-cell a-a">A/A</div>
+            <div class="table-cell">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</div>
+            <div class="table-cell">ΠΡΟΗΓΟΥΜΕΝΗ ΥΠΗΡΕΣΙΑ</div>
+            <div class="table-cell">ΔΙΑΘΕΣΙΜΟΤΗΤΑ</div>
+            <div class="table-cell">ΣΗΜΕΙΩΣΗ</div>
+            <button class="serve" style="visibility: hidden;">ΔΩΣΕ ΥΠΗΡΕΣΙΑ</button>
+            <div class="table-cell" style="visibility: hidden;">ΣΗΜΕΡΑ</div>
+          </div>
+
+          <div class="table-row" [ngClass]="{'not-available': item.availability !== 'ΠΑΡΩΝ'}" *ngFor="let item of companySoldiers.soldiers; let i = index">
+            <div class="table-cell a-a">{{ i+1 }}</div>
+            <div class="table-cell">{{ item.fname + ' ' + item.lname +' ('+item.armed.charAt(0)+')'}}</div>
+            <div class="table-cell">NaN</div>
+            <div class="table-cell availability" [ngClass]="{'green-text': item.availability === 'ΠΑΡΩΝ', 'red-text': item.availability !== 'ΠΑΡΩΝ'}">{{ item.availability }} </div>
+            <div class="table-cell note" contenteditable="true" [ngStyle]="{ 'width.px': calculateNoteWidth(item.note) }" (blur)="onNoteInputChange($event,item)" (keydown.enter)="onEnterKey($event, item)">{{ item.note }}</div>
+            <button class="serve" [style.visibility]="item.availability !== 'ΠΑΡΩΝ' ? 'hidden' : 'visible'" (click)="giveService(item.fname,item.lname,item.armed,item.company)">ΔΩΣΕ ΥΠΗΡΕΣΙΑ</button>
+            <div class="table-cell today" >{{todayServices[i]}}</div>
+          </div>
+        </div>
+
+        <!-- Dashed line between company sections except for the last one -->
+        <div *ngIf="!last" class="dashed-line"></div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div id="addTheSoldier" *ngIf="addSection">
+    <img src="../../assets/x.circle.fill.png" id="xCircle" (click)="closeService()">
+    <app-give id="addSection" [name]="this.lastNamePass" [company]="this.companyPass" [fname]="this.fnamePass" [ability]="this.abilityPass"></app-give>
+  </div>
+
+</div>
+

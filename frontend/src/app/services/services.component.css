@@ -1,0 +1,337 @@
+/* FIRST SLIDE CSS */
+
+/* All the page */
+#all {
+  margin: 0;
+  padding: 0;
+  overflow-y: visible;
+}
+
+/* Topside */
+#topside {
+  height: 107px;
+  display: flex;
+  padding: 34px 72px 34px 97px;
+  align-items: center;
+  background: #5F6F52;
+}
+
+#fiveforfive {
+  color: #FEFAE0;
+  width: 200px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+#date {
+  width: 500px;
+  margin-left: 82%;
+  color: #FFF;
+
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*Secttion Search*/
+#sectionSearch {
+  top: 0;
+
+  height: 100%; /* Take the full height of the container */
+  border-radius: 0 0 30px 30px;
+  margin-top: 20px;
+  padding-left: 72px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+.companyButton{
+  cursor: pointer;
+  margin-right: 80px;
+  display: flex;
+  width: 136px;
+  height: 63px;
+  padding: 17px 17px 17px 18px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #334028;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
+}
+
+#addButton{
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  height: 63px;
+  padding: 17px 17px 17px 18px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #415868;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
+}
+
+.companyButton:hover {
+  background-color: #CFCFB7; /* Change background color on hover */
+}
+
+.companyText{
+  display: flex;
+  height: 29px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;color: #FFF;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s ease; /* Smooth transition for text color */
+}
+
+.companyButton:hover .companyText {
+  color: #2C3424; /* Change text color on hover */
+}
+
+.companyButton.selected {
+  background-color: #CFCFB7; /* Change background color when selected */
+}
+
+.companyButton.selected .companyText {
+  color: #2C3424; /* Change text color when selected */
+}
+
+#searchbar{
+  margin-left: 105px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#searchText{
+  padding-left: 10px;
+  border: none;
+  outline-style: none;
+  height: 50px;
+  width: 500px;
+  font-size: 24px;
+}
+
+#searchIcon{
+  width: 50px;
+  height: 50px;
+}
+
+.companySection{
+  margin-top: 40px;
+  height: 448px;
+  flex-shrink: 0;
+}
+
+#companyName{
+  margin-left:72px;
+  display: flex;
+  height: 49px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;display: flex;
+  height: 49px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #212121;
+
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+
+}
+.soldier-container {
+  display: flex;
+  flex-direction: column;
+  /* Add any additional styling as needed */
+}
+
+.attrtibuteNames{
+  margin-left: 72px;
+  margin-top: 60px;
+
+  display: flex;
+}
+
+.attris{
+
+  display: flex;
+  height: 55px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+
+  color: #000;
+  font-size: 28px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.key{
+  width: 350px;
+  height: 55px;
+  flex-shrink: 0;
+
+
+  color: #000;
+
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+#addTheSoldier{
+  position: fixed;
+  top:20%;
+  left: 30%;
+}
+
+#xCircle{
+
+  cursor: pointer;
+  margin-bottom: -3%;
+  margin-left: 93%;
+}
+
+/*TABLE DATA*/
+.table-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  margin-left: 70px;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-cell {
+  flex: 1.5; /* Set a default flex value for other cells */
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  font-size: 22px;
+}
+
+/* Set specific widths for A/A, ΛΟΧΟΣ, and ΕΣΣΟ */
+.table-cell.lohos,
+.table-cell.armed {
+  flex: 1; /* Half the size of other cells */
+}
+
+.table-cell.today{
+  margin-left: 30px;
+
+}
+
+.table-cell.a-a,
+.table-cell.eso{
+  flex: 0.5;
+}
+
+.table-cell.note{
+  cursor: pointer;
+  font-size: 20px;
+  font-style: italic;
+}
+.header {
+  font-weight: 800;
+  background-color: #f2f2f2;
+}
+
+/*Colorblind*/
+/* Add these styles to your component's stylesheet */
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+#downArrow{
+  margin-top: -3px;
+  margin-left: 40px;
+  width: 20px;
+}
+
+#bin{
+  cursor: pointer;
+  margin-top: 5px;
+  height: 40px;
+  margin-right: -10px;
+}
+
+/*Availability*/
+.not-available{
+  background-color: rgb(177, 177, 177);
+}
+
+/*effects*/
+.blurred {
+  filter: blur(1px); /* Adjust the blur amount as needed */
+}
+
+/*services*/
+.serve{
+  margin-left: 1%;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #334422;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 13px;
+  font-size: 18px;
+}
+
+.service-button {
+  background-color: rgb(189, 189, 78);
+  margin: 15px; /* Adjust margin as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-row {
+  flex-wrap: wrap;
+}

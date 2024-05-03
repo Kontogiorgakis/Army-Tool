@@ -5,8 +5,8 @@ import { DefaultSchemaOptions } from '../../../models/shared';
 // ------------------------------------------
 // Interface declaration
 export interface INotification extends Document {
-  type: string;
-  product: string;
+  lat: string;
+  lon: string;
   message: string;
   completed: boolean;
 }
@@ -15,8 +15,8 @@ export interface INotification extends Document {
 // Schema definition
 const notificationSchema = new Schema(
   {
-    type: { type: String, required: true },
-    product: {type: String, required: true },
+    lat: { type: String, required: true },
+    lon: {type: String, required: true },
     message: { type: String, required: true },
     completed: {type: Boolean, required: true},
   },

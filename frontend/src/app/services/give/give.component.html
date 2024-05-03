@@ -1,0 +1,28 @@
+<div id="addContainer" >
+  <div id="noNumber" *ngIf="noNumber">
+    <div id="title">
+      <img src="../../../assets/soldier.png" id="soldierIcon">
+      <div id="titleText">ΣΤΡ (ΠΖ) {{this.fname}} {{this.name}} ({{this.ability}})</div>
+    </div>
+
+    <div id="credentials">
+      <div *ngFor="let ipiresia of services; let i of services" class="grid-item">
+        <div class="ipiresiaButton" id="ipiresius{{i}}" (click)="assignService($event, ipiresia.serviceName, ipiresia.untilNow, ipiresia.numOfSoldiers)">
+          <div id="ipiresiaName">{{ ipiresia.serviceName }}</div>
+          <div id="ipiresiaNumber">{{ ipiresia.untilNow }}/{{ ipiresia.numOfSoldiers }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Number-->
+  <div id="yesNumber" *ngIf="yesNumber">
+    <div id="backButton" style="visibility: hidden;">ΠΙΣΩ</div>
+    <div id="backButton" (click)="goBack()">ΠΙΣΩ</div>
+    <div *ngFor="let i of numOfYes" class="grid-item">
+      <div class="buttonForNumber" id="numberus{{i}}" (click)="udpateNumber(i)" >{{textOfButtons[i]}}</div>
+    </div>
+  </div>
+</div>
+
